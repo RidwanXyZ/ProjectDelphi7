@@ -1,0 +1,62 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Left = 192
+  Top = 124
+  Height = 391
+  Width = 357
+  object AdoPerpustakaan: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=perpustakaan.mdb;Pe' +
+      'rsist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 40
+    Top = 40
+  end
+  object QRak: TADOQuery
+    Connection = AdoPerpustakaan
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from rak;')
+    Left = 40
+    Top = 112
+  end
+  object DsRak: TDataSource
+    DataSet = QRak
+    Left = 40
+    Top = 184
+  end
+  object QBuku: TADOQuery
+    Active = True
+    Connection = AdoPerpustakaan
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from buku;')
+    Left = 144
+    Top = 112
+  end
+  object dsbuku: TDataSource
+    DataSet = QBuku
+    Left = 144
+    Top = 184
+  end
+  object QPetugas: TADOQuery
+    Active = True
+    Connection = AdoPerpustakaan
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from petugas;')
+    Left = 256
+    Top = 112
+  end
+  object DsPetugas: TDataSource
+    DataSet = QPetugas
+    Left = 256
+    Top = 200
+  end
+end

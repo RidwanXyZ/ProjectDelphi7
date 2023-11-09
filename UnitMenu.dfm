@@ -1,0 +1,116 @@
+object Form3: TForm3
+  Left = 193
+  Top = 128
+  Width = 928
+  Height = 480
+  Caption = 'Perpustakaan'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 200
+    Top = 112
+    Width = 281
+    Height = 177
+    Caption = 'Login'
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 25
+      Top = 36
+      Width = 61
+      Height = 13
+      Caption = 'USERNAME'
+    end
+    object Label2: TLabel
+      Left = 25
+      Top = 76
+      Width = 63
+      Height = 13
+      Caption = 'PASSWORD'
+    end
+    object uname: TEdit
+      Left = 112
+      Top = 34
+      Width = 122
+      Height = 21
+      TabOrder = 0
+      OnKeyDown = unameKeyDown
+      OnKeyPress = unameKeyPress
+    end
+    object pass: TEdit
+      Left = 112
+      Top = 74
+      Width = 122
+      Height = 21
+      PasswordChar = '?'
+      TabOrder = 1
+      OnKeyPress = passKeyPress
+    end
+    object Button1: TButton
+      Left = 24
+      Top = 128
+      Width = 75
+      Height = 25
+      Caption = 'Login'
+      TabOrder = 2
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 160
+      Top = 128
+      Width = 75
+      Height = 25
+      Caption = 'Batal'
+      TabOrder = 3
+    end
+    object X: TButton
+      Left = 248
+      Top = 8
+      Width = 27
+      Height = 25
+      Caption = 'X'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+      OnClick = XClick
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 24
+    Top = 24
+    object Sistem1: TMenuItem
+      Caption = 'Sistem'
+      object Login1: TMenuItem
+        Caption = 'Login'
+        OnClick = Login1Click
+      end
+      object Logout1: TMenuItem
+        Caption = 'Logout'
+      end
+      object Keluar1: TMenuItem
+        Caption = 'Keluar'
+        OnClick = Keluar1Click
+      end
+    end
+    object Rak1: TMenuItem
+      Caption = 'Rak'
+      OnClick = Rak1Click
+    end
+    object Buku1: TMenuItem
+      Caption = 'Buku'
+      OnClick = Buku1Click
+    end
+  end
+end
